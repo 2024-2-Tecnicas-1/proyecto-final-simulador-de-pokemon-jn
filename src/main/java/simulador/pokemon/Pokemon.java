@@ -3,10 +3,10 @@ public abstract class Pokemon {
     public enum Estado {
         NORMAL, DEBILITADO, ENVENENADO, PARALIZADO;
     }
-protected String nombre;
+public String nombre;
 protected TipoPokemon tipo;
 protected Estado estado;
-protected int salud;
+public int salud;
 protected int ataque;
 
 public Pokemon(String nombre,int salud,int ataque,TipoPokemon tipo) {
@@ -31,7 +31,7 @@ public void entrenar(){
 }
     public String getNombre() { return nombre; }
     public int getSalud() { return salud; }
-    public int getPuntosDeAtaque() { return ataque; }
+    public int getAtaque() { return ataque; }
     public TipoPokemon getTipo() { return tipo; }
     public Estado getEstado() { return estado; }
     }
