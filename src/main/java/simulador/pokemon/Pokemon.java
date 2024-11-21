@@ -1,17 +1,17 @@
 package simulador.pokemon;
 public abstract class Pokemon {
 protected String nombre;
-protected List<TipoPokemon> tipo;
+protected TipoPokemon tipo;
 protected String estado;
 protected int salud;
 protected int ataque;
 
-public Pokemon(String nombre,int salud,int ataque, List<TipoPokemon> tipo, String estado){
+public Pokemon(String nombre,int salud,int ataque,TipoPokemon tipo) {
     this.nombre=nombre;
-    this.tipo=tipo;
-    this.estado="normal";
     this.salud=salud;
     this.ataque=ataque;
+    this.tipo=tipo;
+    this.estado=estado;
 }
 public abstract void atacar(Pokemon oponente);
 public void recibirDaño(int daño){
@@ -23,11 +23,12 @@ public void recibirDaño(int daño){
 }
 public void entrenar(){
     this.ataque += 5;
-    this.salud += 10;
+    this.salud += 5;
     System.out.println(nombre +" ha mejorado las estadisticas");
 }
-@Override
-    public String toString() {
-        return nombre + " (Tipo: " + tipo + ", Salud: " + salud + ", Ataque: " + ataque + ", Estado: " + estado + ")";
+    public String getNombre() { return nombre; }
+    public int getSalud() { return salud; }
+    public int getPuntosDeAtaque() { return ataque; }
+    public TipoPokemon getTipo() { return tipo; }
+    public String getEstado() { return estado; }
     }
-}
