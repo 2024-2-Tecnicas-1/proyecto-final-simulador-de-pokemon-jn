@@ -1,15 +1,20 @@
 package simulador.pokemon;
+import java.util.List;
 public abstract class Pokemon {
+
+    public void setNombre(String nombrePokemon) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     public enum Estado {
         NORMAL, DEBILITADO, ENVENENADO, PARALIZADO;
     }
 public String nombre;
-protected TipoPokemon tipo;
+protected List<TipoPokemon> tipo;
 protected Estado estado;
 public int salud;
 protected int ataque;
 
-public Pokemon(String nombre,int salud,int ataque,TipoPokemon tipo) {
+public Pokemon(String nombre,int salud,int ataque,List<TipoPokemon> tipo) {
     this.nombre=nombre;
     this.salud=salud;
     this.ataque=ataque;
@@ -32,6 +37,6 @@ public void entrenar(){
     public String getNombre() { return nombre; }
     public int getSalud() { return salud; }
     public int getAtaque() { return ataque; }
-    public TipoPokemon getTipo() { return tipo; }
+    public List<TipoPokemon> getTipo() { return tipo; }
     public Estado getEstado() { return estado; }
     }

@@ -27,4 +27,12 @@ public class Entrenador {
     public Pokemon seleccionarPokemon(int indice) {
         return equipo.get(indice);
     }
+
+    public Object getEquipo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String getNombre() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

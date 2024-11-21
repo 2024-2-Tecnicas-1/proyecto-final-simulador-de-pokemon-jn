@@ -1,6 +1,6 @@
 package simulador.pokemon;
 public enum TipoPokemon {
-    FUEGO,AGUA,PLANTA,ELECTRICO,VENENO,PSIQUICO,HADA,TIERRA,HIELO,ROCA,VOLADOR,FANTASMA,AGUAVENENO,PsíquicoHada,HieloPsíquico,RocaVolador,FantasmaVeneno;
+    FUEGO,AGUA,PLANTA,ELECTRICO,VENENO,PSIQUICO,HADA,TIERRA,HIELO,ROCA,VOLADOR,FANTASMA,AGUAVENENO,PSICOHADA,HIELOPSIQUICO,ROCAVOLADORA,FANTASMAVENENO;
     public static double multiplicarDaño(TipoPokemon atacante, TipoPokemon defensor){
         if (atacante == FUEGO && defensor == PLANTA) return 2.0;
         if (atacante == FUEGO && defensor == AGUA) return 0.5;
