@@ -1,19 +1,15 @@
 package simulador.pokemon;
+import java.util.Arrays;
 import java.util.List;
 public abstract class Pokemon {
-
-    public void setNombre(String nombrePokemon) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    public enum Estado {
-        NORMAL, DEBILITADO, ENVENENADO, PARALIZADO;
-    }
 public String nombre;
 protected List<TipoPokemon> tipo;
 protected Estado estado;
 public int salud;
 protected int ataque;
-
+public enum Estado {
+    NORMAL, DEBILITADO, ENVENENADO, PARALIZADO;
+    }
 public Pokemon(String nombre,int salud,int ataque,List<TipoPokemon> tipo) {
     this.nombre=nombre;
     this.salud=salud;
@@ -40,3 +36,53 @@ public void entrenar(){
     public List<TipoPokemon> getTipo() { return tipo; }
     public Estado getEstado() { return estado; }
     }
+public class Magmar extends(pokemon){
+    public Magmar(String nombre){
+        super(nombre,65, 95, Arrays.asList(TipoPokemon.FUEGO));
+        }
+}
+    public class Tentacool extends(pokemon){
+    public Tentacool(String nombre){
+        super(nombre,40, 40, Arrays.asList(TipoPokemon.AGUAVENENO));
+        }
+}
+    public class Tangela extends(pokemon){
+    public Tangela(String nombre){
+        super(nombre,40, 40, Arrays.asList(TipoPokemon.AGUAVENENO));
+        }
+}
+            public class Electabuzz extends(pokemon){
+    public Electabuzz(String nombre){
+        super(nombre,65, 83, Arrays.asList(TipoPokemon.ELECTRICO));
+        }
+        }
+    public class Mime extends(pokemon){
+    public Mime(String nombre){
+        super(nombre,40, 45, Arrays.asList(TipoPokemon.PSIQUICOHADA));
+        }
+        }
+        public class Sandshrew extends(pokemon){
+    public Sandshrew(String nombre){
+        super(nombre,50, 75, Arrays.asList(TipoPokemon.TIERRA));
+        }
+        }
+        public class Jynx extends(pokemon){
+    public Jynx(String nombre){
+        super(nombre,65, 50, Arrays.asList(TipoPokemon.HIELOPSIQUICO));
+        }
+        }
+        public class Aerodactyl extends(pokemon){
+    public Aerodactyl(String nombre){
+        super(nombre,80, 105, Arrays.asList(TipoPokemon.ROCAVOLADOR)));
+        }
+        }
+        public class Gastly extends(pokemon){
+    public Gastly(String nombre){
+        super(nombre,30, 35, Arrays.asList(TipoPokemon.FANTASMAVENENO));
+        }
+                }
+            public class Seel extends(pokemon){
+    public class Seel(String nombre){
+        super(nombre,65, 45, Arrays.asList(TipoPokemon.AGUA));
+        }
+      }
