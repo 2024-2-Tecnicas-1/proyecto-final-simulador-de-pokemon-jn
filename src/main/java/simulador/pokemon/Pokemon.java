@@ -1,8 +1,11 @@
 package simulador.pokemon;
 public abstract class Pokemon {
+    public enum Estado {
+        NORMAL, DEBILITADO, ENVENENADO, PARALIZADO;
+    }
 protected String nombre;
 protected TipoPokemon tipo;
-protected String estado;
+protected Estado estado;
 protected int salud;
 protected int ataque;
 
@@ -11,14 +14,14 @@ public Pokemon(String nombre,int salud,int ataque,TipoPokemon tipo) {
     this.salud=salud;
     this.ataque=ataque;
     this.tipo=tipo;
-    this.estado=estado;
+    this.estado=Estado.NORMAL;
 }
 public abstract void atacar(Pokemon oponente);
 public void recibirDaño(int daño){
     this.salud-= daño;
     if(this.salud<=0){
         this.salud=0;
-        this.estado="Debilitado";
+        this.estado=Estado.DEBILITADO;
     }
 }
 public void entrenar(){
@@ -30,5 +33,5 @@ public void entrenar(){
     public int getSalud() { return salud; }
     public int getPuntosDeAtaque() { return ataque; }
     public TipoPokemon getTipo() { return tipo; }
-    public String getEstado() { return estado; }
+    public Estado getEstado() { return estado; }
     }
